@@ -5,7 +5,11 @@ class SessionsController < ApplicationController
   def create
     user = User.from_omniauth(request.env["omniauth.auth"])
     session[:user_id] = user.id
-    redirect_to new_account_path
+    if current_user.account_completed?
+      redirect_to root_path
+    else
+      redirect_to new_registration_car_path
+    end
   end
 
   def destroy

@@ -1,0 +1,13 @@
+---
+:scope: 
+:url: https://tiles.services.mozilla.com/v3/links/fetch/en-US/release
+:body: ''
+:status: 303
+:method: get
+:headers:
+  Content-Type: text/html; charset=utf-8
+  Date: Wed, 26 Jul 2017 08:32:48 GMT
+  Location: https://tiles-cloudfront.cdn.mozilla.net/desktop/STAR/en-US.a59754ad3c730d558fdae8c3a1234bbf8b134c71.ag.json
+  Content-Length: '0'
+  Connection: close
+:content: ''
