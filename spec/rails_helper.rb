@@ -10,7 +10,6 @@ require 'billy/capybara/rspec'
 require 'webmock/rspec'
 require 'vcr'
 
-Capybara.javascript_driver = :selenium_billy
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -31,9 +30,11 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
+
 RSpec.configure do |config|
   config.include Capybara::DSL
 
+  Capybara.javascript_driver = :selenium_billy
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

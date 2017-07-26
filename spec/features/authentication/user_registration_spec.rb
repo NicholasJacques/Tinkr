@@ -25,12 +25,10 @@ RSpec.feature 'New user registration' do
 
       visit new_registration_car_path
 
-      VCR.use_cassette('vin_lookup') do
       expect(page).to have_css('h1', text: 'Get started by adding a car to your Garage')
-        within('#vin-lookup') do
-          fill_in('vin', with: '5FNYF4H4XCB014462')
-          click_on('Find Car')
-        end
+      within('#vin-lookup') do
+        fill_in('vin', with: '5FNYF4H4XCB014462')
+        click_on('Find Car')
       end
     end
   end
