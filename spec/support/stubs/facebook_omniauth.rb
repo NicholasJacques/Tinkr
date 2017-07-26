@@ -23,3 +23,4 @@ def stub_facebook_auth
       }
     })
 end
+  
