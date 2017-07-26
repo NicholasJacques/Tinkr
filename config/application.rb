@@ -27,5 +27,8 @@ module Tinkr
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # set default directory for generated factories
+
   end
 end
