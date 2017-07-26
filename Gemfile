@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # Use postgresql as the database for Active Record
@@ -32,14 +31,22 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'figaro'
+gem 'jquery-rails'
+gem 'faraday'
 
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'faker'
   gem 'launchy'
+  gem 'puffing-billy'
   gem 'shoulda-callback-matchers', '~> 1.1.1'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development, :test do
@@ -47,6 +54,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry'
   gem 'rspec-rails'
+  gem 'selenium-webdriver', '~> 2.53.4'
 end
 
 group :development do
