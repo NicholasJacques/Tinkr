@@ -22,4 +22,4 @@
 /config/application.yml
 
 /spec/support/cassettes
-/spec/support/bill_cache
+/spec/support/bill_cache/*
