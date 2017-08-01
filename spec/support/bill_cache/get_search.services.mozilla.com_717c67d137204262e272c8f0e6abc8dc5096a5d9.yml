@@ -1,0 +1,12 @@
+---
+:scope: 
+:url: https://search.services.mozilla.com/1/firefox/46.0.1/release/en-US/US/default/default
+:body: ''
+:status: 200
+:method: get
+:headers:
+  Content-Type: application/json
+  Date: Wed, 26 Jul 2017 23:34:39 GMT
+  Content-Length: '62'
+  Connection: close
+:content: '{"interval": 31536000, "settings": {"searchDefault": "Yahoo"}}'

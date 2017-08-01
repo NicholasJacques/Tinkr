@@ -1,0 +1,29 @@
+---
+:scope: 
+:url: http://127.0.0.1/api/v1/vin_search
+:body: search%5Bvin%5D=5FNYF4H4XCB014462
+:status: 200
+:method: post
+:headers:
+  X-Frame-Options: SAMEORIGIN
+  X-Xss-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Content-Type: text/html; charset=utf-8
+  Etag: W/"01013a0e929182abf24794afc4d26621"
+  Cache-Control: max-age=0, private, must-revalidate
+  X-Request-Id: b5eef6e4-a6ec-43d0-b631-8fe2a031d9d8
+  X-Runtime: '0.306051'
+  Server: WEBrick/1.3.1 (Ruby/2.3.1/2016-04-26)
+  Date: Thu, 27 Jul 2017 03:02:50 GMT
+  Content-Length: '281'
+  Connection: close
+:content: |-
+  <div class="vin-search-result">
+    <h1>Is this your car?</h1>
+    <div class='car-result'>
+      <h3>2012 Honda Pilot</h3>
+      <p>Engine: 3.5 Liter, 6 Cylinder, gas</p>
+      <p>Transmission: 5 speed, AUTOMATIC</p>
+    </div>
+    <input type="submit" value="Confirm", id="vin-confirm">
+  </div>
