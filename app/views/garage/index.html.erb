@@ -1,0 +1,5 @@
+<h1>Your Garage</h1>
+
+<% @cars.each do |car| %>
+  <%= render partial: 'partials/car_card', locals: {car: car} %>
+<% end %>
