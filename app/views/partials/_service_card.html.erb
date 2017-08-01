@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Labor Action</th>
+    <th>Item</th>
+    <th>Frequency</th>
+    <th>Description</th>
+  </tr>
+  <% services.each do |service| %>
+    <tr>
+      <td><%= service.action %></td>
+      <td><%= service.item %></td>
+      <td>Every <%= service.interval_mileage%> miles</td>
+      <td><%= service.item_description %></td>
+    </tr>
+  <% end %>
+</table>

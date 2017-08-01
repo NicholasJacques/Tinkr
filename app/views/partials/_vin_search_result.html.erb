@@ -1,0 +1,9 @@
+<div class="vin-search-result">
+  <h1>Is this your car?</h1>
+  <div class='car-result' id=<%= "#{car[:vin]}"%>>
+    <h3><%= "#{car[:years].first[:year]} #{car[:make][:name]} #{car[:model][:name]}" %></h3>
+    <p><%= "Engine: #{car[:engine][:size]} Liter, #{car[:engine][:cylinder]} Cylinder, #{car[:engine][:type]}" %></p>
+    <p><%= "Transmission: #{car[:transmission][:numberOfSpeeds]} speed, #{car[:transmission][:transmissionType]}" %></p>
+  </div>
+  <input type="submit" value="Confirm", id="vin-confirm">
+</div>
