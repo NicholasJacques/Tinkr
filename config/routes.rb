@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :accounts, only: [:new]
   resources :sessions, only: [:new]
   resources :garage, only: [:create, :index]
+  resources :service_milestones, only: [:show]
   namespace :registration do
     resources :cars, only: [:new]
   end
