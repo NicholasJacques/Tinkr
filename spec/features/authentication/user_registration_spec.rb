@@ -62,5 +62,29 @@ RSpec.feature 'New user registration' do
         expect(page).to have_content('Transmission: 5 speed, AUTOMATIC')
       end
     end
+
+    scenario 'user confirms cars', js: true do
+      user = create(:unfinished_user)
+
+      allow_any_instance_of(ApplicationController)
+        .to receive(:current_user)
+        .and_return(user)
+
+      visit new_registration_car_path
+
+      within('#vin-lookup') do
+        fill_in('vin', with: '5FNYF4H4XCB014462')
+        click_on('Find Car')
+      end
+
+      click_on 'Confirm'
+      click_on 'Done Adding Cars'
+
+      expect(current_path).to eq(garage_index_path)
+      expect(page).to have_content('Your Garage')
+      expect(page).to have_content('2012 Honda Pilot')
+      expect(page).to have_content('Engine: 3.5 Liter, 6 Cylinder, gas')
+      expect(page).to have_content('Transmission: 5 speed, AUTOMATIC')
+    end
   end
 end

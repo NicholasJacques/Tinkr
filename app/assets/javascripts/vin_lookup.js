@@ -20,5 +20,6 @@ function findVin(e) {
 }
 
 function showResult(response) {
+  $('.search-result-placeholder').empty();  
   $('.search-result-placeholder').append(response);
 }
