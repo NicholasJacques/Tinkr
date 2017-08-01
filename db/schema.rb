@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170801004147) do
+ActiveRecord::Schema.define(version: 20170801054925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,25 @@ ActiveRecord::Schema.define(version: 20170801004147) do
     t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
+  create_table "service_milestones", force: :cascade do |t|
+    t.integer "mileage"
+    t.bigint "car_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["car_id"], name: "index_service_milestones_on_car_id"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "item"
+    t.string "item_description"
+    t.string "action"
+    t.string "interval_mileage"
+    t.bigint "service_milestone_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_milestone_id"], name: "index_services_on_service_milestone_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "uid"
     t.string "name"
@@ -40,4 +59,6 @@ ActiveRecord::Schema.define(version: 20170801004147) do
   end
 
   add_foreign_key "cars", "users"
+  add_foreign_key "service_milestones", "cars"
+  add_foreign_key "services", "service_milestones"
 end
