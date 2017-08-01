@@ -2,5 +2,5 @@
   <h3><%= "#{car.year} #{car.make} #{car.model}" %></h3>
   <p><%= "Engine: #{car.displacement} Liter, #{car.cylinders} Cylinder, #{car.fuel_type}" %></p>
   <p><%= "Transmission: #{car.speeds} speed, #{car.transmission}" %></p>
-  <%= collection_select :car, :service_milestone_id, car.service_milestones.order(mileage: :asc), :id, :mileage, prompt: "Service Milestones"  %>
+  <%= collection_select :car, "select-#{car.id}", car.service_milestones.order(mileage: :asc), :id, :mileage, {prompt: "Service Milestones"}, {class: "milestone-select"} %>
 </div>
