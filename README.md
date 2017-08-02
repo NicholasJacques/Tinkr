@@ -1,24 +1,41 @@
-# README
+# TINKR
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a proof of concept app build with Edmunds API. It is still in the early stages of development. This app currently includes the following features:
 
-Things you may want to cover:
+* Login with Facebook through omniauth
+* Vehicle look up by VIN
+* User can add car's to their "garage"
+* Builds unique and dynamic maintenance schedules for a user's car
 
-* Ruby version
+Features to be implemented next:
+* Give user ability to set reminders for vehicle maintence
+* Find vehicles by make/model/year
+* Ability to store maintenance records
+* Recall notifications
 
-* System dependencies
+### Project Set Up:
 
-* Configuration
+This project require that you have Firefox v46 installed on your machine in order to run the testing suite using Selenium Webdriver.
 
-* Database creation
+Clone this repo
 
-* Database initialization
+ `git clone git@github.com:NicholasJacques/tinkr.git`
 
-* How to run the test suite
+ And then in the project's directory:
 
-* Services (job queues, cache servers, search engines, etc.)
+ `bundle install`
 
-* Deployment instructions
+ Create and migrate the database:
 
-* ...
+ `rake db:create && rake db:migrate`
+
+ Run the test suite:
+
+ `rspec`
+
+### Version Info
+
+This project uses Ruby v2.3.1 and Rails v5.1.2
+
+### Author
+Nicholas Jacques
