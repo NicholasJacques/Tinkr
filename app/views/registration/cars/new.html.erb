@@ -1,18 +1,18 @@
 <h1>Get started by adding a car to your Garage</h1>
 
-<form id="vin-lookup">
-  <span class='form-label'>Find your vehicle by its VIN:</span></br>
-  <input type='text', name='vin', placeholder='2G1FC3D33C9165616'></input>
+<form id="vin-lookup" tabindex="0">
+  <span class='form-label' tabindex="1">Find your vehicle by its VIN:</span></br>
+  <input type='text' tabindex="2", name='vin', placeholder='2G1FC3D33C9165616'></input>
   <input type="submit" value="Find Car", id="vin-submit">
 </form>
 
-<div class="search-result-placeholder">
+<div class="search-result-placeholder" tabindex="2">
 </div>
 
-<div class="temp-garage-placeholder">
+<div class="temp-garage-placeholder" tabindex="4">
   <h1>My Garage</h1>
 </div>
 
-<div hidden class="done-container">
+<div hidden class="done-container"tabindex="3">
   <button hidden, id="account-setup-submit">Done Adding Cars</button>
 </div>
