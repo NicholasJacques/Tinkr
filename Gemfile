@@ -36,6 +36,8 @@ gem 'omniauth-facebook'
 gem 'figaro'
 gem 'jquery-rails'
 gem 'faraday'
+gem 'twitter-bootstrap-rails'
+
 
 group :test do
   gem 'capybara'

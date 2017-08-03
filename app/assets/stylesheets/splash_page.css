@@ -1,0 +1,18 @@
+.facebook-button {
+  height: 60px;
+  width: 318px;
+  color: #FFFFFF;
+  background-color: #4C66A4;
+  border-radius: 5px;
+}
+
+.facebook-button:hover {
+  color: lightgray;
+  background-color: #3C5183;
+  transition: all 0.3s ease 0s;
+}
+
+.facebook-login {
+  margin-top: 40px;
+  font-size: 20px;
+}

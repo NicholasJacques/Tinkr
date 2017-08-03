@@ -1,8 +1,19 @@
-<div id="user-widget">
-  <% if current_user %>
-    Welcome <strong><%= current_user.name %></strong>!
-    <%= link_to "Sign out", signout_path, method: :delete %>
-  <% else %>
-      <%= button_to "Sign in with Facebook", facebook_login_path, method: :get %>
-  <% end %>
+<div class="row">
+  <div class="col-md-12 text-center">
+    <h1>Tinkr</h1>
+    <h4>Car Maintenance Made Easy</h4>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="login col-md-12 text-center facebook-login" id="user-widget">
+      <% if current_user %>
+        Welcome <strong><%= current_user.name %></strong>!
+        <%= link_to "Sign out", signout_path, method: :delete %>
+      <% else %>
+          <%= button_to "Sign in with Facebook", facebook_login_path, method: :get, class: 'facebook-button' %>
+      <% end %>
+    </div>
+  </div>
 </div>
